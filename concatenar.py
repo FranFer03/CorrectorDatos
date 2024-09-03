@@ -2,7 +2,7 @@ import pandas as pd
 import os
 
 
-def join_csv(path="CSV_Pinon/", out_file=None):
+def join_csv(path="CSV_Ejes/", out_file=None):
     """
     Combina los archivos CSV existentes en una carpeta y devolverlo como un
     DataFrame.
@@ -40,11 +40,11 @@ def join_csv(path="CSV_Pinon/", out_file=None):
 
 def main():
     current_directory = os.path.dirname(os.path.abspath(__file__))
-    file = "QG_Pinon_Database.csv" in os.listdir()
+    file = "QG_Ejes_Database.csv" in os.listdir()
     if file:
-        os.remove("QG_Pinon_Database.csv")
-    cvs_directory = os.path.join(current_directory, 'CSV_Pinon')
-    join_csv(path=cvs_directory ,out_file="../QG_Pinon_Database.csv")
+        os.remove("QG_Ejes_Database.csv")
+    cvs_directory = os.path.join(current_directory, 'CSV_Ejes')
+    join_csv(path=cvs_directory ,out_file="../QG_Ejes_Database.csv")
 
 
 if __name__ == "__main__":
